@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Articles</h1>
+  <div ng-controller="ArticleCtrl">
+    <form ng-submit="createArticle()">
+      <input type="text" ng-model='newArticle' placeholder="Enter a article">
+      <input type="text" ng-model='newDesc' as="rich" >
+      <input type="submit" value="Add">
+ </form>
+    <ul>
+      <li ng-repeat="article in articles">
+	{{article.title}}, {{article.description}}
+	<a href='' ng-click="deleteArticle(article.id, $index)">Delete</a>
+      </li>
+    </ul>
+  </div>
+</div>

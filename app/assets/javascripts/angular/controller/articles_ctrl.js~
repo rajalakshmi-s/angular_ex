@@ -1,0 +1,9 @@
+app.controller('ArticleCtrl', ['$scope', 'Article', function($scope, Article) {
+  $scope.articles = Article.all();
+
+
+  $scope.deleteArticle = function(id,idx) {
+    $scope.articles.splice(idx, 1);
+    return Article.delete(id);
+  };
+}]);

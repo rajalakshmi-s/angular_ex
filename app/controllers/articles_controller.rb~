@@ -1,0 +1,9 @@
+class ArticlesController < ApplicationController
+  respond_to :json
+  def index
+    respond_with Article.all
+  end
+  def destroy
+   respond_with Article.destroy(params[:id])
+  end
+end
