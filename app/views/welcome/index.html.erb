@@ -3,8 +3,10 @@
   <div ng-controller="ArticleCtrl">
     <form ng-submit="createArticle()">
       <input type="text" ng-model='newArticle' placeholder="Enter a article">
-      <input type="text" ng-model='newDesc' as="rich" >
-      <input type="submit" value="Add">
+</br>
+      <textarea type="text" ng-model='newDesc' as="rich" ></textarea>
+</br>
+      <input type="submit" value="Add"/>
  </form>
     <ul>
       <li ng-repeat="article in articles">

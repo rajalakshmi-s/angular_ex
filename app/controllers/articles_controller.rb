@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    respond_with Stock.create(article_params)
+    respond_with Article.create(article_params)
   end
 
   def destroy
